@@ -1,12 +1,22 @@
+import sys
+import re
+from collections import Counter
 
 
 def load_data(filepath):
-    pass
+    words = re.findall(r'\w+', open(filepath).read().lower())
+    return words
 
 
-def get_most_frequent_words(text):
-    pass
+def get_most_frequent_words(words):
+    most_frequent_words = Counter(words).most_common(10)
+    return most_frequent_words
 
 
 if __name__ == '__main__':
-    pass
+    if len(sys.argv) == 1:
+        sys.exit("Usage: python3 lang_frequency.py <path_to_txt>")
+    filepath = sys.argv[1]
+    file_object = load_data(filepath)
+    print(get_most_frequent_words(file_object))
+
