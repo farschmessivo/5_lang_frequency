@@ -1,6 +1,25 @@
 # Frequency Analysis of Words
 
-[TODO. There will be project description]
+# Quickstart
+
+Example of script launch on Linux, Python 3.5:
+
+```bash
+$ python3 lang_frequency.py <name_file.txt>
+[('the', 122),
+ ('a', 50),
+ ('action', 48),
+ ('to', 40),
+ ('is', 38),
+ ('be', 35),
+ ('controller', 34),
+ ('class', 32),
+ ('filter', 27),
+ ('and', 26)]
+
+
+```
+
 
 # Project Goals
 

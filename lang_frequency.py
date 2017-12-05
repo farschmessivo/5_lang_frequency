@@ -1,5 +1,6 @@
 import sys
 import re
+import pprint
 from collections import Counter
 
 
@@ -18,5 +19,7 @@ if __name__ == '__main__':
         sys.exit("Usage: python3 lang_frequency.py <path_to_txt>")
     filepath = sys.argv[1]
     file_object = load_data(filepath)
-    print(get_most_frequent_words(file_object))
+    print('---------------------------')
+    print('10 most popular words:')
+    pprint.pprint(get_most_frequent_words(file_object))
 
