@@ -6,16 +6,20 @@ Example of script launch on Linux, Python 3.5:
 
 ```bash
 $ python3 lang_frequency.py <name_file.txt>
-[('the', 122),
- ('a', 50),
- ('action', 48),
- ('to', 40),
- ('is', 38),
- ('be', 35),
- ('controller', 34),
- ('class', 32),
- ('filter', 27),
- ('and', 26)]
+The most popular words:
+-----------------------
+1 the 	 122
+2 a 	 50
+3 action 	 48
+4 to 	 40
+5 is 	 38
+6 be 	 35
+7 controller 	 34
+8 class 	 32
+9 filter 	 27
+10 and 	 26
+_______________________
+
 
 
 ```
