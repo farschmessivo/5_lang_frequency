@@ -20,6 +20,6 @@ if __name__ == '__main__':
     filepath = sys.argv[1]
     file_object = load_data(filepath)
     print('---------------------------')
-    print('10 most popular words:')
+    print('ten most popular words:')
     pprint.pprint(get_most_frequent_words(file_object))
 
