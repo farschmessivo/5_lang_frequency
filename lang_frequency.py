@@ -5,26 +5,26 @@ from collections import Counter
 
 def load_data(filepath):
     with open(filepath) as file_handler:
-        text_object = file_handler.read()
-    return text_object
+        text = file_handler.read()
+    return text
 
 
-def get_most_frequent_words(text_object):
-    words = text_object.lower()
+def get_most_frequent_words(text):
+    words = text.lower()
     all_words = re.findall(r'\w+', words)
     ten = 10
-    most_frequent_words = Counter(all_words).most_common(ten)
-    return most_frequent_words
+    ten_most_frequent_words = Counter(all_words).most_common(ten)
+    return ten_most_frequent_words
 
 
 if __name__ == '__main__':
     if len(sys.argv) == 1:
         sys.exit("Usage: python3 lang_frequency.py <path_to_txt>")
     filepath = sys.argv[1]
-    file_object = load_data(filepath)
-    hh = get_most_frequent_words(file_object)
+    text = load_data(filepath)
+    ten_most_frequent_words = get_most_frequent_words(text)
     print("The most popular words:")
     print("-----------------------")
-    for number, words_and_amount in enumerate(hh, 1):
-        print("{} \t {} \t {}".format(number, *words_and_amount))
+    for number, (word, amount) in enumerate(ten_most_frequent_words, 1):
+        print("{} \t {} \t {}".format(number, word, amount))
     print("_______________________")
